@@ -1,4 +1,15 @@
 package com.codewithjeff.store;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
 public class HomeController {
+    @RequestMapping("/")
+    public String Home(){
+        return getViewName();
+    }
+    private String getViewName(){
+        return "Home.html";
+    }
 }
