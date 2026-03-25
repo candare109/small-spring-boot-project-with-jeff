@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
     @RequestMapping("/")
     public String Home(){
+        return getViewName();
+    }
+    private String getViewName(){
         return "Home.html";
     }
 }
